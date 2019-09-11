@@ -4,7 +4,7 @@ number = random.randint(-10000, 10000)
 ldigit = abs(number) % 10
 start = "Last digit of {:d} is {:d}"
 if number < 0:
-    number *= -1
+    number = number * -1
 if number >= 0:
     if ldigit > 5:
         end = "and is greater than 5"
