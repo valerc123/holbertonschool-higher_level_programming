@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-ldigit = number % 10
+ldigit = abs(number) % 10
 start = "Last digit of {:d} is {:d}"
 if number < 0:
     number *= -1
