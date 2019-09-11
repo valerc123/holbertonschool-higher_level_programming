@@ -6,9 +6,10 @@ start = "Last digit of {:d} is {:d}"
 if number < 0:
     number = number * -1
 if ldigit > 5:
-    end = "and is greater than 5"
+    print(start.format(number, ldigit), "and is greater than 5")
 elif ldigit == 0:
-    end = "and is 0"
+    print(start.format(number, ldigit), "and is 0")
 elif ldigit < 6 and ldigit != 0:
-    end = "and is less than 6 and not 0"
-print(start.format(number, ldigit) + " " + end)
+    print(start.format(number, ldigit), "and is less than 6 and not 0")
+else:
+    print(start.format(number, ldigit), 'and is 0')
