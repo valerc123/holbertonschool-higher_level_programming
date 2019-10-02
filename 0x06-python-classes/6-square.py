@@ -34,7 +34,8 @@ class Square:
     def my_print(self):
         if self.__size == 0:
             print()
-        for i in range(self.__position[1]):
+            return
+        for spaces in range(self.__position[1]):
             print()
         for row in range(self.__size):
             for colum in range(self.__position[0]):
@@ -42,3 +43,4 @@ class Square:
             for j in range(self.__size):
                 print("{}".format("#"), end="")
             print()
+
