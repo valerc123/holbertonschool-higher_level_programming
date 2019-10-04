@@ -36,7 +36,7 @@ def matrix_divided(matrix, div):
         # Create new_row
         new_row = []
         # matrix must be a list
-        if type(matrix) not is list:
+        if type(matrix) is not list:
             raise TypeError('matrix must be a matrix (list of lists)  '
                             'of integers/floats')
     # 2. Row is empty
@@ -52,7 +52,7 @@ def matrix_divided(matrix, div):
                                 'of integers/floats')
     # 4. add content to the row
         # All elements will be divided by div and rounded to 2 decimal places.
-            new_row.append(item / div, 2)
+            new_row.append(round((item / div), 2))
         # Add content to the matrix
         new_matrix.append(new_row)
     return new_matrix
