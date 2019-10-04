@@ -5,6 +5,7 @@ it adds two integers
 a and b must be first casted
 """
 
+
 def add_integer(a, b=98):
     """
     a and are integers
