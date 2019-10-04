@@ -1,16 +1,17 @@
 #!/usr/bin/python3
 """
-This is the addition module
-it adds two integers
-a and b must be first casted
+    This is the addition module
+    it adds two integers
+    a and b must be first casted
 """
 
 
 def add_integer(a, b=98):
-    """
-    a and are integers
+
+    """a and b are integers
     Returns an integer: the addition of a and b
     """
+
     if isinstance(a, float):
         a = int(a)
     if isinstance(b, float):
