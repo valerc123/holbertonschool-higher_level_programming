@@ -15,7 +15,9 @@ def matrix_divided(matrix, div):
     """
     new_matrix = []
     length = 0
-
+    # div can't be  0
+    if div == 0:
+        raise ZeroDivisionError("division by zero")
     # if the divisor is neither integer nor float
     if type(div) is not int and type(div) is not float:
         raise TypeError('div must be a number')
