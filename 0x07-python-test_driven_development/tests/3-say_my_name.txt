@@ -1,0 +1,39 @@
+===========================
+How to use 3-say_my_name.py
+===========================
+
+Function
+========
+´´say_my_name(first_name, last_name="")´´
+
+Operations
+=========
+´´say_my_name()´´ prints name and lastname
+
+1) Import file
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+2) The first argument is an integer:
+    >>> say_my_name(2)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+3) The second argument is an integer:
+    >>> say_my_name("Vale", 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+4) The first and second arguments are integers:
+    >>> say_my_name(2, 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+5) There are not arguments
+    >>> say_my_name()
+    Traceback (most recent call last):
+    ...
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
