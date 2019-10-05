@@ -12,10 +12,13 @@ def add_integer(a, b=98):
     Returns an integer: the addition of a and b
     """
 
+    # Cast the variables if are floats
     if isinstance(a, float):
         a = int(a)
     if isinstance(b, float):
         b = int(b)
+
+    # The variables must be integers
     if not (isinstance(a, int)):
         raise TypeError("a must be an integer")
     elif not (isinstance(b, int)):
