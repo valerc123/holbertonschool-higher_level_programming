@@ -33,12 +33,9 @@ add_integer() returns the sum of its arguments. For number, that value is equiva
     	...
 	TypeError: b must be an integer
 
-6) None
-	>>> add_integer()
-	Traceback (most recent call last):
-    	...
-	TypeError: add_integer() missing 1 required positional
-	argument: 'a'
+6) b is equal to 98 for default:
+	>>> add_integer(10)
+	108
 
 7) Should return sum of one `float` and one `int`:
 	>>> add_integer(1234.5, 1)
