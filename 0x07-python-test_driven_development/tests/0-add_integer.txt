@@ -48,3 +48,23 @@ add_integer() returns the sum of its arguments. For number, that value is equiva
 9) Should return the sum with a negative integer:
     >>> add_integer(-1, 99)
     98
+
+10) Should raise overFlowError if the arguments are too big 
+	>>> add_integer(float('-inf'), float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+11) Should raise overFlowError if the a is too big 
+	>>> add_integer(100e1000, 1)
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+12) Should raise OverFlowError if float is too big: 
+	>>> add_integer(float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+13) Should not convert NaN to integer: 
+	>>> add_integer(float('nan'), 0)
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
