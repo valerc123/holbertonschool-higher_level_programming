@@ -40,18 +40,14 @@ add_integer() returns the sum of its arguments. For number, that value is equiva
 	TypeError: add_integer() missing 1 required positional
 	argument: 'a'
 
-7) b is 98
-	>>> add_integer(10)
-	108
-
-8) Should return sum of one `float` and one `int`:
+7) Should return sum of one `float` and one `int`:
 	>>> add_integer(1234.5, 1)
 	1235
 
-9) integer bytes
+8) integer bytes
 	>>> add_integer(1000000000000000, 10)
 	1000000000000010
 
-10) Should return the sum with a negative integer:
+9) Should return the sum with a negative integer:
     >>> add_integer(-1, 99)
     98
