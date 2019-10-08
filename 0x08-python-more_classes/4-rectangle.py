@@ -72,15 +72,20 @@ class Rectangle:
         return perimeter
 
     def __str__(self):
+        """Returns human readable string of """
         new_str = ""
         if self.width == 0 or self.height == 0:
-            return new_str
-        for height in range(self.height):
-            for width in range(self.width):
-                new_str += "#"
-            new_str += "\n"
+            return ""
+        else:
+            for height in range(self.height):
+                for width in range(self.width):
+                    new_str += "#"
+                """Doesn't print the last line break"""
+                if height != self.heigth - 1:
+                     new_str += "\n"
         return new_str
 
     def __repr__(self):
+        """Return: string representation of the rectangle"""
         return "Rectangle(" + str(self.width) + "," + \
                 str(self.height) + ")"
