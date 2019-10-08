@@ -86,11 +86,11 @@ class Rectangle:
                 """Doesn't print the last line break
                 """
                 if height != self.height - 1:
-                     new_str += "\n"
+                    new_str += "\n"
         return new_str
 
     def __repr__(self):
         """Return: string representation of the rectangle
         """
         return "Rectangle(" + str(self.width) + ", " + \
-                str(self.height) + ")"
+               str(self.height) + ")"
