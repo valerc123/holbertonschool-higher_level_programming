@@ -11,8 +11,8 @@ class Rectangle:
                 width (int): width of rectangle with value >= 0.
                 height (int): height of rectangle with value >= 0.
         """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     # Private instance attribute: width
     @property
