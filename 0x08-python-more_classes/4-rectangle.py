@@ -81,7 +81,7 @@ class Rectangle:
                 for width in range(self.width):
                     new_str += "#"
                 """Doesn't print the last line break"""
-                if height != self.heigth - 1:
+                if height != self.height - 1:
                      new_str += "\n"
         return new_str
 
