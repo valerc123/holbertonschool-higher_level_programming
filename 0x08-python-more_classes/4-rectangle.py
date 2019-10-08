@@ -60,19 +60,22 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Method to compute area of Rectangle instance"""
+        """Method to compute area of Rectangle instance
+        """
         area = self.width * self.height
         return area
 
     def perimeter(self):
-        """Method to compute perimeter length of Rectangle instance."""
+        """Method to compute perimeter length of Rectangle instance.
+        """
         if self.width == 0 or self.height == 0:
             perimeter = 0
         perimeter = (self.width + self.height) * 2
         return perimeter
 
     def __str__(self):
-        """Returns human readable string of """
+        """Returns human readable string of
+        """
         new_str = ""
         if self.width == 0 or self.height == 0:
             return ""
@@ -80,12 +83,14 @@ class Rectangle:
             for height in range(self.height):
                 for width in range(self.width):
                     new_str += "#"
-                """Doesn't print the last line break"""
+                """Doesn't print the last line break
+                """
                 if height != self.height - 1:
                      new_str += "\n"
         return new_str
 
     def __repr__(self):
-        """Return: string representation of the rectangle"""
+        """Return: string representation of the rectangle
+        """
         return "Rectangle(" + str(self.width) + ", " + \
                 str(self.height) + ")"
