@@ -75,5 +75,6 @@ class Rectangle:
                     new_str += "#"
                 """Doesn't print the last line break"""
                 if height != self.heigth - 1:
-                     new_str += "\n"
+                    break
+                new_str += "\n"
         return new_str
