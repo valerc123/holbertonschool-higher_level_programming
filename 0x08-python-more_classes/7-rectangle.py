@@ -34,30 +34,32 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
+    """Public method """
     def area(self):
-        area = self.__width * self.__height
-        return area
+        return self.width * self.height
 
     def perimeter(self):
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0 or self.height == 0:
             perimeter = 0
-        perimeter = (self.__width + self.__height) * 2
-        return perimeter
+        return (self.width + self.height) * 2
 
     def __str__(self):
         new_str = ""
-        if self.__width == 0 or self.__height == 0:
-            return new_str
-        for height in range(self.__height):
-            for width in range(self.__width):
+        if self.width == 0 or self.height == 0:
+            return ""
+        for height in range(self.height):
+            for width in range(self.width):
                 new_str += str(self.print_symbol)
+            if height == self.height - 1:
+                break
             new_str += "\n"
         return new_str
 
     def __repr__(self):
-        return "Rectangle(" + str(self.__width) + "," + \
-                str(self.__height) + ")"
+        return "Rectangle(" + str(self.width) + ", " + \
+               str(self.height) + ")"
 
+    """ Delete """
     def __del__(self):
-        print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
