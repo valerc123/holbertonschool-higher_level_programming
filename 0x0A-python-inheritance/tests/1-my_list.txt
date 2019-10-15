@@ -1,0 +1,14 @@
+======================
+Module - 1-my_list.py
+======================
+
+Operations
+==========
+´´print_sorted()´´ prints sorted list
+
+1) Import Module
+    >>> MyList = __import__('1-my_list').MyList
+
+2) Add element
+   >>> my_list.append(1)
+   1	
