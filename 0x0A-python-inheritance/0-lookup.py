@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""This module that returns
+"""This module returns
     attributes and methods of an object
 """
 
