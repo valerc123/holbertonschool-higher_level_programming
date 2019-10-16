@@ -8,5 +8,8 @@ def number_of_lines(filename=""):
     '''
     Function that returns the number of lines of a text file
     '''
-    for lines in filename:
-        print(lines, end="")
+    with open(filename, 'r', encoding='utf8') as f:
+        i = 0
+        for lines in f:
+            i += 1
+        return i
