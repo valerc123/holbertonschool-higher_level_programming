@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
-    Module - MyList
+    Module - MyList class
 """
 
 
 class MyList(list):
     """
-    The elements of the list is interger,
-    returns the list sorted
+    Derived class Mylist
+    inherits from the class list
     """
 
     def print_sorted(self):
