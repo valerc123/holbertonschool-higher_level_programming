@@ -92,13 +92,14 @@ class Rectangle(Base):
                                                                  self.width,
                                                                  self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         Update method: update the dictionary (key/value)
         argument to each attribute
 
         Args:
            args: single pointer to a dictionary: key/value
+           kwargs: dictionary with key/value arguments
         """
         if args and len(args) > 0:
             for index, arg in enumerate(args):
@@ -113,3 +114,15 @@ class Rectangle(Base):
                     self.x = arg
                 if index == 4:
                     self.y = arg
+        elif kwargs and len(kwargs) > 0:
+            for key, value in kwargs.items():
+                if key == 'id':
+                    self.id = value
+                if key == 'width':
+                    self.width = value
+                if key == 'height':
+                    self.height = value
+                if key == 'x':
+                    self.x = value
+                if key == 'y':
+                    self.y = value
