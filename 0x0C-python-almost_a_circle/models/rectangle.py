@@ -121,8 +121,14 @@ class Rectangle(Base):
                 if key == 'width':
                     self.width = value
                 if key == 'height':
+                    
                     self.height = value
                 if key == 'x':
                     self.x = value
                 if key == 'y':
                     self.y = value
+
+    def to_dictionary(self):
+        """returns the dictionary representation of Rectangle"""
+        attr = ['id', 'width', 'height', 'x', 'y']
+        return {key: getattr(self, key) for key in attr}
