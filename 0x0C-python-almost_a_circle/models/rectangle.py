@@ -77,8 +77,12 @@ class Rectangle(Base):
 
     def display(self):
         """Print a rectangle display"""
+        spaces = self.x
+        n_line = self.y
+        if n_line != 0:
+            print('\n' * (n_line - 1))
         for j in range(self.height):
-            print('#'*self.width)
+            print(" "*spaces + '#'*self.width)
 
     def __str__(self):
         "Informal rectangle string representation"
@@ -87,3 +91,25 @@ class Rectangle(Base):
                                                                  self.y,
                                                                  self.width,
                                                                  self.height)
+
+    def update(self, *args):
+        """
+        Update method: update the dictionary (key/value)
+        argument to each attribute
+
+        Args:
+           args: single pointer to a dictionary: key/value
+        """
+        if args and len(args) > 0:
+            for index, arg in enumerate(args):
+                if index == 0:
+                   # super().__init__(arg)\
+                    self.id = arg
+                if index == 1:
+                    self.width = arg
+                if index == 2:
+                    self.height = arg
+                if index == 3:
+                    self.x = arg
+                if index == 4:
+                    self.y = arg
