@@ -1,16 +1,15 @@
 #!/usr/bin/python3
-"""Import Json module"""
-
-import json
-
 """
     Module - Base
 """
 
+import json
+
+"""Import Json module"""
+
 
 class Base:
     """Base class"""
-
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -38,7 +37,7 @@ class Base:
 
         with open(filename, 'w', encoding='utf-8') as f:
             if list_objs is None:
-                file.write("[]")
+                f.write("[]")
             else:
                 f.write(cls.to_json_string(n_json))
 
