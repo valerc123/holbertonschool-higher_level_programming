@@ -61,7 +61,15 @@ class Base:
         """
         Returns an instance with all attributes already set
         """
-        dummy = cls(1, 1)
+        # Verify if the class is Rectangle
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1, 1, 1)
+        elif cls.__name__ == "Square":
+            dummy = cls(1, 1, 1)
+        elif cls.__name__ == "Base":
+            dummy = cls(1)
+        # Update the dummy (Rectangle or Square)
+        # and update using classmethd
         dummy.update(**dictionary)
         return dummy
 
