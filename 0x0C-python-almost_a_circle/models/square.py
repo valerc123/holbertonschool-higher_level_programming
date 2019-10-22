@@ -1,14 +1,16 @@
 #!/usr/bin/python3
-"""Imports module rectangle"""
-
-from models.rectangle import Rectangle
 """
     Module - Square
 """
 
+from models.rectangle import Rectangle
+
+""" Imports module rectangle """
+
 
 class Square(Rectangle):
     """ Representation of a Square"""
+
     def __init__(self, size, x=0, y=0, id=None):
         """initialize square"""
         super().__init__(size, size, x, y, id)
