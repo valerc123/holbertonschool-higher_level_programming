@@ -32,8 +32,16 @@ class Base:
         for obj in list_objs:
             n_json.append(obj.to_dictionary())
 
-        with open(filename, 'w+') as f:
+        with open(filename, 'w+', encoding='utf-8') as f:
             if list_objs is None:
                 file.write("[]")
             else:
                 f.write(cls.to_json_string(n_json))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns the list of the JSON string representation json_string"""
+        if json_string is None:
+            return []
+        else:
+            return json.loads(json_string)
