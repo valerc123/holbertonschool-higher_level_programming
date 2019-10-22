@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"""Imports module Base"""
-
-from models.base import Base
-
 """
     Module -  Rectangle
 """
+
+from base import Base
+
+"""Imports module Base"""
 
 
 class Rectangle(Base):

@@ -3,7 +3,7 @@
     Module - Square
 """
 
-from models.rectangle import Rectangle
+from rectangle import Rectangle
 
 """ Imports module rectangle """
 
