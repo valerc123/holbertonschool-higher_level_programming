@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Imports module rectangle"""
+
 from models.rectangle import Rectangle
 """
     Module - Square
