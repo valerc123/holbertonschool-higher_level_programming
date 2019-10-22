@@ -121,7 +121,6 @@ class Rectangle(Base):
                 if key == 'width':
                     self.width = value
                 if key == 'height':
-                    
                     self.height = value
                 if key == 'x':
                     self.x = value
