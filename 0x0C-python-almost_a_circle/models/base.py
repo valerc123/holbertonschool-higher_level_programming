@@ -67,7 +67,7 @@ class Base:
         elif cls.__name__ == "Square":
             dummy = cls(1, 1, 1)
         elif cls.__name__ == "Base":
-            dummy = cls(1)
+            dummy = cls()
         # Update the dummy (Rectangle or Square)
         # and update using classmethd
         dummy.update(**dictionary)
