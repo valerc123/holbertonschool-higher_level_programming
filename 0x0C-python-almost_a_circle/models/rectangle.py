@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 """
-    Module -  Rectangle
+Module -  Rectangle
 """
 
 from models.base import Base
-
-"""Imports module Base"""
 
 
 class Rectangle(Base):
@@ -74,7 +72,7 @@ class Rectangle(Base):
         """
         Setters of x
         """
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
@@ -92,7 +90,7 @@ class Rectangle(Base):
         """
         Setters of y
         """
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")

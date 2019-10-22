@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 """
-    Module - Base
+Module - Base
 """
 
 import json
-
-"""Import Json module"""
 
 
 class Base:
