@@ -2,7 +2,8 @@
 """Imports module Base"""
 from models.base import Base
 
-""" Module -  Rectangle
+"""
+    Module -  Rectangle
 """
 
 
