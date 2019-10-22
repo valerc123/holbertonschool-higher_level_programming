@@ -9,7 +9,9 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """Class Rectangle that inherits from class Base"""
+    """
+    Class Rectangle that inherits from class Base
+    """
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initialitation attributes with parameters
@@ -26,12 +28,16 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """Getters of width """
+        """
+        Getters of width
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Setters of width """
+        """
+        Setters of width
+        """
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -40,12 +46,16 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """Getters of height """
+        """
+        Getters of height
+        """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Setters of height """
+        """
+        Setters of height
+        """
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -54,12 +64,16 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """Getters of x """
+        """
+        Getters of x
+        """
         return self.__x
 
     @x.setter
     def x(self, value):
-        """Setters of x """
+        """
+        Setters of x
+        """
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -68,12 +82,16 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """Getters of y """
+        """
+        Getters of y
+        """
         return self.__y
 
     @y.setter
     def y(self, value):
-        """Setters of y """
+        """
+        Setters of y
+        """
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -81,11 +99,15 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """ Returns the area value of the Rectangle instance """
+        """
+        Returns the area value of the Rectangle instance
+        """
         return self.height * self.width
 
     def display(self):
-        """Print a rectangle display"""
+        """
+        Print a rectangle display
+        """
         spaces = self.x
         n_line = self.y
         if n_line != 0:
@@ -94,7 +116,9 @@ class Rectangle(Base):
             print(" "*spaces + '#'*self.width)
 
     def __str__(self):
-        """Informal rectangle string representation"""
+        """
+        Informal rectangle string representation
+        """
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id,
                                                                  self.x,
                                                                  self.y,
@@ -137,6 +161,8 @@ class Rectangle(Base):
                     self.y = value
 
     def to_dictionary(self):
-        """Returns the dictionary representation of Rectangle"""
+        """
+        Returns the dictionary representation of Rectangle
+        """
         attr = ['id', 'width', 'height', 'x', 'y']
         return {key: getattr(self, key) for key in attr}

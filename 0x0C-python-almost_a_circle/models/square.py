@@ -9,15 +9,21 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """ Representation of a Square"""
+    """
+    Representation of a Square
+    """
 
     def __init__(self, size, x=0, y=0, id=None):
-        """Initialize square"""
+        """
+        Initialize square
+        """
         super().__init__(size, size, x, y, id)
         self.size = size
 
     def __str__(self):
-        """Informal Square string representation"""
+        """
+        Informal Square string representation
+        """
         return "[Square] ({:d}) {:d}/{:d} - {:d}".format(self.id,
                                                          self.x,
                                                          self.y,
