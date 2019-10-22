@@ -2,6 +2,9 @@
 """Imports module Base"""
 from models.base import Base
 
+""" Module -  Rectangle
+"""
+
 
 class Rectangle(Base):
     '''Class Rectangle that inherits from class Base'''
