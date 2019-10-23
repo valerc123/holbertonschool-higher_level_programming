@@ -3,6 +3,7 @@
 Module - Base
 """
 import json
+import turtle
 
 
 class Base:
@@ -85,3 +86,30 @@ class Base:
                 return list_instance
         except FileNotFoundError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        import turtle
+        from random import randrange
+        turtle.Screen().colormode(255)
+        turt = turtle.Turtle()
+        turt.color('blue')
+        turt.pensize(5)
+        turt.shape('turtle')
+
+        for i in list_rectangles + list_squares:
+            turt.penup()
+            turt.setpos(i.x, i.y)
+            turt.pendown()
+            turt.color(randrange(255), randrange(255), randrange(255))
+            turt.fillcolor(randrange(255), randrange(255), randrange(255))
+            turt.begin_fill()
+            turt.forward(i.width)
+            turt.left(90)
+            turt.forward(i.height)
+            turt.left(90)
+            turt.forward(i.width)
+            turt.left(90)
+            turt.forward(i.height)
+            turt.left(90)
+            turt.end_fill()
