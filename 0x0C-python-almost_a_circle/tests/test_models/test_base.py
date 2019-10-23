@@ -1,59 +1,106 @@
 #!/usr/bin/python3
-"""Module for base to test with unittest"""
-
+""" 
+TestBase - To prube the class base
+"""
 import unittest
 from models.base import Base
 
 
 class Unittest_base(unittest.TestCase):
-    """test for base clase"""
-    def test_is_subclass(self):
-        """ test instance """
-        instance = Base(1)
-        self.assertIsInstance(instance, Base)
-        # Test that expresion is (or is not) None.
-        self.assertIsNot(instance, Base)
-
+    def setUp(self):
+        """
+        setUp - set up the private value
+        __nb_objects = 0
+        """
+        Base._Base__nb_objects = 0
     def test_id(self):
-        """ test base ID """
-        # id 2
-        b1 = Base()
-        # Test that first and second are equal
-        self.assertEqual(b1.id, 3)
-        self.assertEqual(b1.id, Base._Base__nb_objects)
-        # id 12
-        b2 = Base(12)
-        self.assertEqual(b2.id, 12)
-        # we didn't tested for integers
-        b3 = Base("string")
-        self.assertEqual(b3.id, "string")
-        b4 = Base({id: 1})
-        self.assertEqual(b4.id, {id: 1})
-        # not a number
-        # interpreted as a value
-        # that is undefined or unrepresentable
-        b5 = Base(float('NaN'))
-        # a != b
-        self.assertNotEqual(b5.id, b5.id)
-        b6 = Base([2])
-        self.assertEqual(b6.id, [2])
-        b7 = Base(3.4)
-        self.assertEqual(b7.id, 3.4)
-        b8 = Base((3, 4))
-        self.assertEqual(b8.id, (3, 4))
-        b9 = Base({3, 4})
-        self.assertEqual(b9.id, {3, 4})
-        # id 2
-        b10 = Base(None)
-        self.assertEqual(b10.id, 2)
-        self.assertEqual(b10.id, Base._Base__nb_objects)
-
-    def test_module_docstring(self):
-        """Tests docstring in class Base"""
-        self.assertTrue(len(self.__class__.__doc__) >= 1)
-
-    def test_class_docstring(self):
-        """Tests docstring in functions"""
-        base = Base()
-        self.assertTrue(len(base.to_json_string.__doc__) >= 1)
-
+        """
+        test_id - test the id
+        """
+        in_1 = Base()
+        self.assertEqual(in_1.id, 1)
+        
+    def test_instance(self):
+        """
+        test_instance - test the instance id
+        """
+        in_1 = Base()
+        in_2 = Base()
+        in_3 = Base()
+        in_4 = Base()
+        in_5 = Base()
+        in_6 = Base()
+        in_7 = Base()
+        in_8 = Base()
+        in_9 = Base()
+        self.assertEqual(in_9.id, 9)
+    
+    def test_id_value(self):
+        """
+        test_id_value - change the id
+        """
+        in_1 = Base(15)
+        self.assertEqual(in_1.id, 15)
+    
+    def test_negative_number(self):
+        """
+        test_negative_number - change
+        the id for negative number
+        """
+        in_1 = Base(-1)
+        self.assertEqual(in_1.id, -1)
+    
+    def test_string(self):
+        """
+        test_string - change the id for
+        a string
+        """
+        in_1 = Base("String")
+        self.assertEqual(in_1.id, "String")
+    def test_dict_base(self):
+        """
+        test_dict_base - change the id
+        for dict
+        """
+        in_1 = Base({id: 1})
+        self.assertEqual(in_1.id, {id: 1})
+    
+    def test_float_base(self):
+        """
+        test_float_base - change the id
+        for float nul
+        """
+        in_1 = Base(float('NaN'))
+        self.assertNotEqual(in_1.id, in_1.id)
+    
+    def test_list(self):
+        """
+        test_list - change the id
+        for list
+        """
+        in_1 = Base([420])
+        self.assertEqual(in_1.id, [420])
+    def test_float2(self):
+        """
+        test_float2 - change id to
+        float number
+        """
+        in_1 = Base(3.14)
+        self.assertEqual(in_1.id, 3.14)
+        
+    def test_tuple(self):
+        """
+        test_tuple - change the id for a tuple
+        """
+        in_1 = Base((6, 9))
+        self.assertEqual(in_1.id, (6, 9))
+    
+    def test_array(self):
+        """
+        test_array - change the id to
+        array
+        """
+        in_1 = Base({4, 2, 0})
+        self.assertEqual(in_1.id, {0, 2, 4})
+if __name__ == '__main__':
+    unittest.main()
