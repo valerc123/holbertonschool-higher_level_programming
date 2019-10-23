@@ -91,6 +91,7 @@ class Base:
     def draw(list_rectangles, list_squares):
         import turtle
         from random import randrange
+
         turtle.Screen().colormode(255)
         turt = turtle.Turtle()
         turt.color('blue')
