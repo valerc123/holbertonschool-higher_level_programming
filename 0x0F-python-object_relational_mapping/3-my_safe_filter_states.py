@@ -12,7 +12,7 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host='localhost', user=username, passwd=password, db=database)
 
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name = '{:s}'".format(nameSearch))
+    cursor.execute("""SELECT * FROM states WHERE name = %(username)s""", {'username': username})
     rows = cursor.fetchall()
     for row in rows:
         print(row)
