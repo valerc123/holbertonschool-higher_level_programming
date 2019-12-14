@@ -17,7 +17,12 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states"
-                   "WHERE name = '{:s}'".format(nameSearch))
+                   "WHERE name = '{:s}'"
+                   "ORDER BY id ASC"
+                   .format(nameSearch))
+
     rows = cursor.fetchall()
     for row in rows:
         print(row)
+    cursor.close()
+    db.close()
