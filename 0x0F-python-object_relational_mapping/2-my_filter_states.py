@@ -13,7 +13,6 @@ if __name__ == "__main__":
                          user=username,
                          passwd=password,
                          db=database)
-
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states WHERE name = '{:s}'".format(nameSearch))
     rows = cursor.fetchall()
