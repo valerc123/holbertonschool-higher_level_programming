@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+    Displays all values in the states table where name matches the argument
+"""
 import MySQLdb
 import sys
 
@@ -18,8 +21,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states"
                    "WHERE name = '{:s}'"
-                   "ORDER BY id ASC"
-                   .format(nameSearch))
+                   "ORDER BY id ASC".format(nameSearch))
 
     rows = cursor.fetchall()
     for row in rows:
