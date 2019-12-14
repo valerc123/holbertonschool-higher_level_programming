@@ -1,14 +1,16 @@
 #!/usr/bin/python3
-""" Lists all states from the database hbtn_0e_0_usa """
+"""
+Lists all states from the database hbtn_0e_0_usa
+"""
 
 if __name__ == "__main__":
     import sys
     import MySQLdb
     # Take arguments
-   # sys.argv = sys.sys.argv
-    username = sys.argv[1]
-    passwd = sys.argv[2]
-    database = sys.argv[3]
+    argv = sys.argv
+    username = argv[1]
+    passwd = argv[2]
+    database = argv[3]
     # Connect to MySQL server
     db = MySQLdb.connect(host='localhost',
                          port=3306,
