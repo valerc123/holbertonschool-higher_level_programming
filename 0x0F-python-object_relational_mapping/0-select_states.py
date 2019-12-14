@@ -5,10 +5,10 @@ if __name__ == "__main__":
     import sys
     import MySQLdb
     # Take arguments
-    argv = sys.argv
-    username = argv[1]
-    passwd = argv[2]
-    database = argv[3]
+   # sys.argv = sys.sys.argv
+    username = sys.argv[1]
+    passwd = sys.argv[2]
+    database = sys.argv[3]
     # Connect to MySQL server
     db = MySQLdb.connect(host='localhost',
                          port=3306,
