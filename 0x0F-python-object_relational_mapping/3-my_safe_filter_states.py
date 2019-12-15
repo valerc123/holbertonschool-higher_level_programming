@@ -7,7 +7,7 @@ if __name__ == "__main__":
     username = argv[1]
     password = argv[2]
     database = argv[3]
-    nameSearch = argv[4]
+    state = argv[4]
 
     db = MySQLdb.connect(host='localhost',
                          user=username,
@@ -16,8 +16,8 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states "
-                   "WHERE name = %(username)s "
-                   "ORDER BY id ASC ", {'username': username})
+                   "WHERE name = %(state)s "
+                   "ORDER BY id ASC", {'state': state})
     rows = cursor.fetchall()
     for row in rows:
         print(row)
