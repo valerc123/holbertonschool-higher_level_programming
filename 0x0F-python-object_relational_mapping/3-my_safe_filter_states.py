@@ -9,11 +9,15 @@ if __name__ == "__main__":
     database = argv[3]
     nameSearch = argv[4]
 
-    db = MySQLdb.connect(host='localhost', user=username, passwd=password, db=database)
+    db = MySQLdb.connect(host='localhost',
+                         user=username,
+                         passwd=password,
+                         db=database)
 
     cursor = db.cursor()
-    cursor.execute("""SELECT * FROM states WHERE name = %(username)s""", {'username': username})
+    cursor.execute("SELECT * FROM states "
+                   "WHERE name = %(username)s "
+                   "ORDER BY id ASC ", {'username': username})
     rows = cursor.fetchall()
     for row in rows:
         print(row)
-
