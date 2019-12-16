@@ -23,4 +23,3 @@ if __name__ == "__main__":
         print("{}: {}".format(colum.id, colum.name))
     else:
         print("Nothing")
-
