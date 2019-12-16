@@ -11,7 +11,8 @@ Base = declarative_base()
 class State(Base):
     # Declare the name of the table
     __tablename__ = 'states'
-    # fileds of table states
+
+    # fileds of table ´states´
     id = Column(Integer, primary_key=True, nullable=True,
                 autoincrement=True, unique=True)
-    name = Column(String(128, nullable=False))
+    name = Column(String(128), nullable=False)
