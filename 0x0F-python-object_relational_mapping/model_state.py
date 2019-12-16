@@ -9,6 +9,11 @@ Base = declarative_base()
 
 
 class State(Base):
+    """Class representing the `states` table.
+    Columns:
+        id (int): /NOT NULL/AUTO_INCREMENT/PRIMARY_KEY/
+        name (string): /VARCHAR(128)/NOT NULL/
+    """
     # Declare the name of the table
     __tablename__ = 'states'
 
