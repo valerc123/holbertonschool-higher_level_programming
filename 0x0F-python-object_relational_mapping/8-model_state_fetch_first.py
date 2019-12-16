@@ -19,4 +19,8 @@ if __name__ == "__main__":
     # order date
     colum = query.order_by(State.id).first()
 
-    print("{}: {}".format(colum.id, colum.name))
+    if colum:
+        print("{}: {}".format(colum.id, colum.name))
+    else:
+        print("Nothing")
+
