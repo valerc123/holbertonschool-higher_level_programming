@@ -8,10 +8,8 @@ if __name__ == "__main__":
     # Create conection to engine of db
     engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}"
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
-
     # Create metadata
     Base.metadata.create_all(engine)
-
     # Create instance for engine
     Session = sessionmaker(bind=engine)
     # initialize
