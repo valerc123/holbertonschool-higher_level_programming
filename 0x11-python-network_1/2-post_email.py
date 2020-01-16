@@ -7,10 +7,13 @@
 from urllib import request, parse
 import sys
 
-data = {'email': sys.argv[2]}
-data = parse.urlencode(data)
-data = data.encode('ascii')
 
-with request.urlopen(sys.argv[1], data) as request:
-    req = request.read().decode('utf-8')
-    print(req)
+if __name__ == "__main__":
+
+    data = {'email': sys.argv[2]}
+    data = parse.urlencode(data)
+    data = data.encode('ascii')
+
+    with request.urlopen(sys.argv[1], data) as request:
+        req = request.read().decode('utf-8')
+        print(req)
