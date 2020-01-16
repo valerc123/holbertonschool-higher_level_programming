@@ -12,5 +12,5 @@ data = parse.urlencode(data)
 data = data.encode('ascii')
 
 with request.urlopen(sys.argv[1], data) as request:
-    req = request.read()
+    req = request.read().decode('utf-8')
     print(req)
