@@ -3,10 +3,10 @@
     Sends a requests and display the variable
     X-Request-Id in the response header
 """
-import requests
-import sys
+from requests import get
+from sys import argv
 
 
-res = requests.get(sys.argv[1])
-
-print(res.headers["X-Request-Id"])
+if __name__ == "__main__":
+    res = get(argv[1])
+    print(res.headers.get("X-Request-Id"))
