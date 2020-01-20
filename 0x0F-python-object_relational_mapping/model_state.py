@@ -18,6 +18,7 @@ class State(Base):
     __tablename__ = 'states'
 
     # fileds of table ´states´
-    id = Column(Integer, primary_key=True, nullable=True,
+    id = Column(Integer, primary_key=True, nullable=False,
                 autoincrement=True, unique=True)
     name = Column(String(128), nullable=False)
+
