@@ -8,5 +8,5 @@ import requests
 if __name__ == "__main__":
     r = requests.get('https://intranet.hbtn.io/status')
     print("Body response:")
-    print("- type: {}".format(type(r)))
-    print("- content: {}".format(r))
+    print("\t- type: {}".format(type(r.text)))
+    print("\t- content: {}".format(r.text))
