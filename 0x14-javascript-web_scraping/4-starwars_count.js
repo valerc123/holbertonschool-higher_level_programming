@@ -6,11 +6,11 @@ const req = require('request');
 req(url, (err, req, body) => {
   if (err) console.log(err);
 
-  let res = JSON.parse(body).results;
+  const res = JSON.parse(body).results;
   let wedge = 0;
-  for (let index in res) {
-    let character = res[index].characters;
-    for (let i in character) {
+  for (const index in res) {
+    const character = res[index].characters;
+    for (const i in character) {
       if (character[i].includes('18')) {
         wedge++;
       }
